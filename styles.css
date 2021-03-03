@@ -1,10 +1,65 @@
 
 
 body {
-    background-color: lightblue;
+    background-color: rgb(71, 169, 202);
   }
   
   h1 {
+    text-align: center;
     color: navy;
     margin-left: 20px;
   }
+
+  #question {
+    width:70%;
+    padding: 30px;
+    border: 3px solid white;
+    background-color: royalblue;
+    color: white;
+    font-size: 28px;
+    margin: 10px auto;
+  }
+
+  #answer {
+    width: 50%;
+    margin: 10px auto;
+    color: white;
+    border: 3px solid white;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #answer ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  #answer ul li {
+    height: 40px;
+    padding-top: 15px;
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+  }
+
+#scores{
+    display: flex;
+    width:70%;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: royalblue;
+    border: 3px solid white;
+    color: white;
+}
+
+#player1, #player2{
+  text-align: center;
+  width: 50%1940;
+}
+
