@@ -7,18 +7,18 @@ const state = {
   currentQuestion: {}, //empty object
   which: true
 }
-let questions = [];
+let questions = []
 
 // ! Main DOM Elements
 
-const $question = $("#question");
-const $a = $("#a");
-const $b = $("#b");
-const $c = $("#c");
-const $d = $("#d");
-const $p1Score = $("#player1 h4");
-const $p2Score = $("#player2 h4");
-console.log($p1Score, $p2Score);
+const $question = $("#question")
+const $a = $("#a")
+const $b = $("#b")
+const $c = $("#c")
+const $d = $("#d")
+const $p1Score = $("#player1 h4")
+const $p2Score = $("#player2 h4")
+console.log($p1Score, $p2Score)
 
 // ! Functions
 
@@ -42,10 +42,10 @@ const chooseAnswer = (event, question) => {
 
 const setBoard = (q) => {
   //Getting a random question
-  const randomIndex = Math.floor(Math.random() * q.length);
-  const randomQuestion = q[randomIndex];
+  const randomIndex = Math.floor(Math.random() * q.length)
+  const randomQuestion = q[randomIndex]
   //Update question
-  $question.text(randomQuestion.question);
+  $question.text(randomQuestion.question)
   $a.text(randomQuestion.a)
   $b.text(randomQuestion.b)
   $c.text(randomQuestion.c)
@@ -55,6 +55,7 @@ const setBoard = (q) => {
   $p1Score.text(state.player1)
   $p2Score.text(state.player2)
   // remove the event listener before adding a new one
+
   $("li").off();
   $("li").on("click", (event) => {
       chooseAnswer(event, randomQuestion)
@@ -69,4 +70,6 @@ $.ajax(url)
  questions = data.items.map((q) => q.fields)
  console.log(data)
  console.log(questions)
+ setBoard(questions)
 })
+
